@@ -14,7 +14,7 @@ sudo apt-get install libcsound64-dev libcsnd-dev
 ## Installation
 
 ```r
-devtool::install_github("yutannihilation/rsound")
+devtools::install_github("yutannihilation/rsound")
 ```
 
 ## Usage
