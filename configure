@@ -1,0 +1,6 @@
+echo "PKG_LIBS= -lcsound64" > src/Makevars
+
+if [ ! -r "/usr/include/csound/csound.hpp" ] && [ ! -r "/usr/include/csound/csound.hpp" ]; then
+  echo "libcsnd not found. Please install libcsnd-dev (deb) or csnd-devel (rpm)."
+  exit 1
+fi

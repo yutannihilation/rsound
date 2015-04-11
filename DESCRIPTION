@@ -1,0 +1,11 @@
+Package: rsound
+Type: Package
+Title: csound for R
+Version: 0.0.0.9000
+Date: 2015-04-11
+Author: Hiroaki Yutani
+Maintainer: Hiroaki Yutani <yutani.ini@gmail.com>
+Description: An R interface to csound
+License: MIT
+Imports: Rcpp (>= 0.11.5)
+LinkingTo: Rcpp
