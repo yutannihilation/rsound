@@ -22,18 +22,14 @@ devtools::install_github("yutannihilation/rsound")
 ```r
 library(rsound)
 
-orc <- 'sr=44100
-ksmps=32
-nchnls=2
-0dbfs=1
-
-instr 1
-aout vco2 0.5, 440
-outs aout, aout
-endin'
+orc <- create_orchestra( sr    = 44100,
+                         ksmps = 32,
+                         nchnls = 2,
+                         `0dbfs` = 1,
+                         instrument = create_instrument(aout = "vco2 0.5, 440", outs = "aout, aout"))
 
 sco <- 'i1 0 1'
 
-csound(orc, sco)
+csound(orc, sco, "/tmp/test.wav")
 ```
 And you will find that `/tmp/test1.wav` is created.

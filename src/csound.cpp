@@ -2,11 +2,12 @@
 #include <csound/csound.hpp>
 using namespace Rcpp;
 
+//' @export
 // [[Rcpp::export]]
-int csound(String orchestra, String score) {
+int csound_impl(String orchestra, String score, String options) {
   Csound *csound = new Csound();
 
-  csound->SetOption("-o/tmp/test.wav");
+  csound->SetOption((char*) options.get_cstring());
   
   csound->CompileOrc((char*) orchestra.get_cstring());
   

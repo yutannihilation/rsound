@@ -5,15 +5,16 @@
 
 using namespace Rcpp;
 
-// csound
-int csound(String orchestra, String score);
-RcppExport SEXP rsound_csound(SEXP orchestraSEXP, SEXP scoreSEXP) {
+// csound_impl
+int csound_impl(String orchestra, String score, String options);
+RcppExport SEXP rsound_csound_impl(SEXP orchestraSEXP, SEXP scoreSEXP, SEXP optionsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
     Rcpp::RNGScope __rngScope;
     Rcpp::traits::input_parameter< String >::type orchestra(orchestraSEXP);
     Rcpp::traits::input_parameter< String >::type score(scoreSEXP);
-    __result = Rcpp::wrap(csound(orchestra, score));
+    Rcpp::traits::input_parameter< String >::type options(optionsSEXP);
+    __result = Rcpp::wrap(csound_impl(orchestra, score, options));
     return __result;
 END_RCPP
 }

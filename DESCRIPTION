@@ -7,5 +7,10 @@ Author: Hiroaki Yutani
 Maintainer: Hiroaki Yutani <yutani.ini@gmail.com>
 Description: An R interface to csound
 License: MIT
-Imports: Rcpp (>= 0.11.5)
-LinkingTo: Rcpp
+Imports:
+  Rcpp (>= 0.11.5),
+  R6
+LinkingTo:
+  Rcpp
+Suggests:
+  knitr
