@@ -2,6 +2,7 @@
 #include <csound/csound.hpp>
 using namespace Rcpp;
 
+//' @useDynLib rsound
 //' @export
 // [[Rcpp::export]]
 int csound_impl(String orchestra, String score, String options) {
