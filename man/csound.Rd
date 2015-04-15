@@ -6,7 +6,16 @@
 \usage{
 csound(orchestra, score, output = "dac")
 }
+\arguments{
+\item{orchestra}{An \link{orchestra} object or string}
+
+\item{score}{An \link{score} object or string}
+}
 \description{
-Make Some Noise!
+Create sounds from orchestra and score. The output can be either audio interface
+or a file(.wav, .ogg, etc).
+}
+\seealso{
+\url{http://en.flossmanuals.net/csound/ch014_e-rendering-to-file/}
 }
 
