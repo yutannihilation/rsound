@@ -3,11 +3,11 @@
 \name{instrument}
 \alias{create_instrument}
 \alias{instrument}
-\title{Instrument}
+\title{Ins}
 \usage{
 create_instrument(...)
 }
 \description{
-Instrument
+Ins
 }
 

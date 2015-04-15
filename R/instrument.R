@@ -1,5 +1,5 @@
-#' Instrument
-#' 
+#' Instrument class
+#'
 #' @name instrument
 #' @export
 create_instrument <- function(...){
@@ -8,12 +8,5 @@ create_instrument <- function(...){
 
 #' @export
 as.character.instrument <- function(instrument){
-  #TODO: handle multiple lenght of instruments
-  i <- 1
-  
-  lines <- c(sprintf("instr %d", i),
-             paste(names(instrument), unlist(instrument), sep = " "),
-             "endin")
-  
-  paste(lines, collapse = "\n")
+  paste(names(instrument), unlist(instrument), sep = " ", collapse = "\n")
 }

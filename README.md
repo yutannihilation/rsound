@@ -26,7 +26,9 @@ orc <- create_orchestra( sr    = 44100,
                          ksmps = 32,
                          nchnls = 2,
                          `0dbfs` = 1,
-                         instrument = create_instrument(aout = "vco2 0.5, 440", outs = "aout, aout"))
+                         instrument = list(
+                           create_instrument(aout = "vco2 0.5, 440", outs = "aout, aout"))
+                         )
 
 sco <- 'i1 0 1'
 
