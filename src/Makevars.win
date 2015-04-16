@@ -1,1 +1,1 @@
-PKG_LIBS= -L"C:/Program Files (x86)/Csound6/include" -lcsound64
+PKG_LIBS= -I"C:/Program Files (x86)/Csound6/include" -lcsound64
