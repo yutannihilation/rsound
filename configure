@@ -1,5 +1,10 @@
 echo "PKG_LIBS= -lcsound64" > src/Makevars
 
+if [ $(echo "$OSTYPE" | grep "darwin") ]; then
+  echo "Sorry, I don't know about Mac well; no check is done on whether Csound has installed or not."
+  exit 0
+fi
+
 if [ ! -r "/usr/include/csound/csound.hpp" ] && [ ! -r "/usr/include/csound/csound.hpp" ]; then
   echo "libcsnd not found. Please install libcsnd-dev (deb) or csnd-devel (rpm)."
   exit 1
